@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function VENOCYBER_MD_QR_CODE() {
+	async function NALIKLYN_MD_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Venocyber_Tech = Venocyber_Tech({
+			let Qr_Code_By_naliklyn_Tech = Venocyber_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -58,15 +58,15 @@ router.get('/', async (req, res) => {
 				   let b64data = Buffer.from(data).toString('base64');
 				   let session = await Qr_Code_By_Venocyber_Tech.sendMessage(Qr_Code_By_Venocyber_Tech.user.id, { text: '' + b64data });
 	
-				   let VENOCYBER_MD_TEXT = `
+				   let NALIKLYN_MD_TEXT = `
 *_Qr Code By Venocyber Tech_*
 *_Made With 🤍_*
 ______________________________________
-*_Pair Code Connected by Venocyber Tech_*
+*_Pair Code Connected by Naliklyn Tech_*
 *_Made With 🤍_*
 ______________________________________
 ╔════◇
-║ *『 WOW YOU CHOOSEN VENOCYBER-MD 』*
+║ *『 WOW YOU CHOOSEN NALIKLYN-MD 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚══════════════════════╝
 ╔═════◇
@@ -103,6 +103,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await VENOCYBER_MD_QR_CODE()
+	return await NALIKLYN_MD_QR_CODE()
 });
 module.exports = router
