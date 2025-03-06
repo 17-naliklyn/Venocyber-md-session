@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Venocyber_Tech,    useMultiFileAuthState,
+    default: naliklyn_Tech,    useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
     Browsers
@@ -19,7 +19,7 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function VENOCYBER_MD_PAIR_CODE() {
+        async function NALIKLYN_MD_PAIR_CODE() {
         const {
             state,
             saveCreds
@@ -55,12 +55,12 @@ router.get('/', async (req, res) => {
                let b64data = Buffer.from(data).toString('base64');
                let session = await Pair_Code_By_Venocyber_Tech.sendMessage(Pair_Code_By_Venocyber_Tech.user.id, { text: '' + b64data });
 
-               let VENOCYBER_MD_TEXT = `
-*_Pair Code Connected by Venocyber Tech_*
+               let NALIKLYN_MD_TEXT = `
+*_Pair Code Connected by naliklyn Tech_*
 *_Made With 🤍_*
 ______________________________________
 ╔════◇
-║ *『 WOW YOU CHOOSEN VENOCYBER-MD 』*
+║ *『 WOW YOU CHOOSEN NALIKLYN-MD 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚══════════════════════╝
 ╔═════◇
@@ -94,6 +94,6 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await VENOCYBER_MD_PAIR_CODE()
+    return await NALIKLYN_MD_PAIR_CODE()
 });
 module.exports = router
